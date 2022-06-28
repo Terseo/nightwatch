@@ -1,6 +1,7 @@
 module.exports = {
     // An array of folders (excluding subfolders) where your tests are located;
     // if this is not specified, the test source must be passed as the second argument to the test runner.
+    skip_testcases_on_fail: false,
     src_folders: ["tests"],
     webdriver: {
         start_process: true,
