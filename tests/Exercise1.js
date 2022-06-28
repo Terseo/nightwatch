@@ -1,13 +1,13 @@
 describe('API/UI Automation', function () {
 
-    it('Go to Nightwatch page', function (browser) {
+    it('Test 1: Go to Nightwatch page', function (browser) {
         browser
             .url('https://nightwatchjs.org/')
             .waitForElementVisible('body', 2000)
             .assert.containsText('[class="col-md-6"]', "Nightwatch")
 
     });
-    it('Go to Developer Guide instead of Gettting Started', function (browser) {
+    it('Test 2: Go to Developer Guide instead of Gettting Started', function (browser) {
         browser
             .useXpath()
             .click('//*[@id="navigation"]/ul/li[2]/a')
@@ -17,7 +17,7 @@ describe('API/UI Automation', function () {
             .assert.elementPresent('[placeholder="Filter by title"]')
 
     });
-    it('Use Search Bar and select firt result', function (browser) {
+    it('Test 3: Use Search Bar and select firt result', function (browser) {
         browser
             .setValue('[placeholder="Filter by title"]', 'Asserts')
 
@@ -30,21 +30,21 @@ describe('API/UI Automation', function () {
 
 
     });
-    it('Check API Reference Exist in header ', function (browser) {
+    it('Test 4: Check API Reference Exist in header ', function (browser) {
         browser
             .assert.attributeContains("li a[href = '/api/']", 'href', 'a')
             .assert.containsText("li a[href = '/api/']", "API Reference")
 
 
     });
-    it('Go to Blog page', function (browser) {
+    it('Test 5: Go to Blog page', function (browser) {
         browser
             .useXpath()
             .click('//*[@id="navbartop"]/ul/li[5]/a')
             .assert.not.urlContains('https://nightwatchjs.org/guide/overview/what-is-nightwatch.html')
             .assert.urlContains('https://nightwatchjs.org/blog/')
     });
-    it('Scrolldown and validate message', function (browser) {
+    it('Test 6: Scrolldown and validate message', function (browser) {
         browser
             .execute('scrollTo(0,5000)')
 
