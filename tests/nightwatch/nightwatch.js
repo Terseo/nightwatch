@@ -1,12 +1,11 @@
 module.exports = {
-    'Test1: Validate img is loaded in page': function (browser) {
+    'Test1: Validate filter text developer guide': function (browser) {
         var nightwatch = browser.page.landingpage();
 
         nightwatch
             .navigate()
-            .waitForElementVisible('body')
-            .click('@codeImage')
-            .assert.not.elementPresent('@nightTitle')
+            .filterTextDevGuide()
+            .selectFirstElement()
         browser.end();
     }
 }
