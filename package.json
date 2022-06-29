@@ -11,6 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^103.0.0",
-    "nightwatch": "^1.7.8"
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "nightwatch": "^1.7.8",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "superagent": "^8.0.0"
   }
 }
